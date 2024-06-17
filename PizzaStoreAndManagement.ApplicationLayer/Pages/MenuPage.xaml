@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaStoreAndManagement.ApplicationLayer.Pages.MenuPage"
+             Title="Меню Пиццерии">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    <Grid BackgroundColor="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ScrollView Orientation="Horizontal" HeightRequest="60" Grid.Row="0">
+            <StackLayout Orientation="Horizontal" Spacing="45" BackgroundColor="DarkOrange">
+                <Button Text="Пиццы" Command="{Binding ScrollToCategoryCommand}" CommandParameter="Пицца" />
+                <Button Text="Закуски" Command="{Binding ScrollToCategoryCommand}" CommandParameter="Закуска" />
+                <Button Text="Напитки" Command="{Binding ScrollToCategoryCommand}" CommandParameter="Напиток" />
+            </StackLayout>
+        </ScrollView>
+        <CollectionView x:Name="MenuItemsCollectionView" ItemsSource="{Binding MenuItems}" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Grid.RowSpan="2" Padding="5" Margin="5" BackgroundColor="White" CornerRadius="10" BorderColor="LightGray">
+                            <Image Source="{Binding URL}" WidthRequest="80" HeightRequest="80" />
+                        </Frame>
+
+                        <Frame Grid.Column="1" Margin="10,0,0,0" Padding="5" BackgroundColor="White" CornerRadius="10" BorderColor="LightGray">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                                <Label Text="{Binding Description}" FontSize="Small" TextColor="Gray" />
+                                <Button Text="{Binding Price, StringFormat='От {0:F0} рублей'}"
+                                        Margin="10"
+                                        Padding="6"
+                                        MinimumHeightRequest="10"
+                                        HorizontalOptions="Start"
+                                        CornerRadius="20"
+                                        BackgroundColor="Wheat"
+                                        Clicked="OnPriceButtonClicked" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Grid Grid.Row="2" ColumnSpacing="10" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Frame Grid.Column="0" CornerRadius="20" Padding="5" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button ImageSource="ordericon.png"
+                        Command="{Binding NavigateToOrderCommand}"
+                        Padding="10" />
+            </Frame>
+
+            <Frame Grid.Column="2" CornerRadius="20" Padding="5" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button ImageSource="binicon.png" 
+                        Command="{Binding NavigateToCartCommand}" 
+                        Padding="10,0" />
+            </Frame>
+            <Frame Grid.Column="1" CornerRadius="20" Padding="5" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button ImageSource="exiticon.png" 
+            Command="{Binding NavigateToLoginCommand}" 
+            Padding="10,0" />
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

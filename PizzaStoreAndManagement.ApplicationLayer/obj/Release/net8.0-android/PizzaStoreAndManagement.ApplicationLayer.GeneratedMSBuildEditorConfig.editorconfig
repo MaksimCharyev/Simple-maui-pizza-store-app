@@ -1,0 +1,89 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PizzaStoreAndManagement.ApplicationLayer
+build_property.ProjectDir = C:\PizzaStoreAndManagement\PizzaStoreAndManagement.ApplicationLayer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/CartPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.CartPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\CartPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\CartPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/FoodOrderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.FoodOrderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FoodOrderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FoodOrderPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MainPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/ManagePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.ManagePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ManagePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ManagePage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/MenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.MenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MenuPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/OrderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.OrderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\OrderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\OrderPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Pages/RegPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Pages.RegPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegPage.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/PizzaStoreAndManagement/PizzaStoreAndManagement.ApplicationLayer/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PizzaStoreAndManagement.ApplicationLayer.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PizzaStoreAndManagement.ApplicationLayer.ViewModels"
+             x:Class="PizzaStoreAndManagement.ApplicationLayer.Pages.CartPage"
+             Title="Корзина">
+
+    <ContentPage.BindingContext>
+        <local:CartViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid Padding="10" BackgroundColor="Wheat">
+        <!-- Определяем строки для размещения элементов -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Для заголовка -->
+            <RowDefinition Height="*" />
+            <!-- Для коллекции товаров в корзине -->
+            <RowDefinition Height="Auto" />
+            <!-- Для общей стоимости -->
+            <RowDefinition Height="Auto" />
+            <!-- Для кнопки -->
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок страницы -->
+        <Label Text="Ваша корзина" 
+               FontSize="Large" 
+               TextColor="White" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Start" 
+               Grid.Row="0" />
+
+        <!-- Коллекция товаров в корзине -->
+        <CollectionView ItemsSource="{Binding CartItems}" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White" Padding="10" Margin="5" CornerRadius="10" BorderColor="LightGray">
+                        <Grid Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Изображение слева -->
+                            <Image Source="{Binding Food.URL}" WidthRequest="80" HeightRequest="80" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start" />
+
+                            <!-- Информация о товаре -->
+                            <StackLayout Grid.Column="1" Padding="10, 0" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Food.Name}" FontAttributes="Bold" FontSize="Medium" TextColor="Black" />
+                                <Label Text="{Binding Extra}" FontSize="Small" TextColor="Gray" />
+                                <Label Text="{Binding Summary, StringFormat='{0:F0} рублей'}" FontSize="Small" TextColor="Black" />
+                            </StackLayout>
+
+                            <!-- Кнопки управления количеством товара -->
+                            <StackLayout Grid.Column="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Spacing="5">
+                                <Button ImageSource="minusicon.png"
+                                        BackgroundColor="Transparent"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:CartViewModel}}, Path=DecreaseQuantityCommand}"
+                                        CommandParameter="{Binding .}"
+                                        WidthRequest="30"
+                                        HeightRequest="30"
+                                        Padding="0" />
+                                <Label Text="{Binding Quantity}"
+                                       FontSize="Medium"
+                                       TextColor="Black"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                                <Button ImageSource="plusicon.png"
+                                        BackgroundColor="Transparent"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:CartViewModel}}, Path=IncreaseQuantityCommand}"
+                                        CommandParameter="{Binding .}"
+                                        WidthRequest="30"
+                                        HeightRequest="30"
+                                        Padding="0" />
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Общая стоимость -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Grid.Row="2">
+            <Label Text="Общая стоимость: " FontSize="Medium" TextColor="White" />
+            <Label Text="{Binding TotalPrice, StringFormat='{0:F0} рублей'}" FontSize="Small" Margin="7" FontAttributes="Bold" TextColor="White" />
+        </StackLayout>
+
+        <!-- Кнопка оформления заказа -->
+        <Button Text="Оформить заказ" 
+                Command="{Binding PlaceOrderCommand}" 
+                BackgroundColor="Orange" 
+                TextColor="White" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="End" 
+                Margin="10, 0" 
+                Grid.Row="3" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaStoreAndManagement.ApplicationLayer.Pages.RegPage"
+             Title="RegPage">
+    <StackLayout Padding="10" Spacing="10" BackgroundColor="Wheat">
+        <Label Text="Ваше имя" FontSize="18"/>
+        <Entry Text="{Binding Name}" Placeholder="Введите ваше имя" Keyboard="Default"/>
+        <Label Text="Почта" FontSize="18" />
+        <Entry Text="{Binding Email}" Placeholder="Введите вашу почту" Keyboard="Email" />
+
+        <Label Text="Пароль" FontSize="18" />
+        <Entry Text="{Binding Password}" Placeholder="Введите ваш пароль" IsPassword="True" />
+
+        <Label Text="Повторите пароль" FontSize="18" />
+        <Entry Text="{Binding ConfirmPassword}" Placeholder="Подтвердите ваш пароль" IsPassword="True" />
+
+        <Button Text="Создать аккаунт" BackgroundColor="OrangeRed" Command="{Binding RegisterCommand}" />
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+    </StackLayout>
+</ContentPage>

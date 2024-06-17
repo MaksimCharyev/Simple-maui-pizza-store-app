@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaStoreAndManagement.ApplicationLayer.Pages.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="OrangeRed">
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="15, 25">
+        <Border StrokeShape="RoundRectangle 24" StrokeThickness="0" BackgroundColor="Brown"></Border>
+        <Label Grid.Row="0"
+               Text="Дуду Пицца"
+               FontSize="46"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" TextColor="AntiqueWhite"/>
+        <Image Grid.Row="1"
+               Source="mainpage_logo.jpg"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+        <VerticalStackLayout Grid.Row="2"
+                             Spacing="10">
+            <Label Text="Лучшая пиццерия"
+                   FontSize="40"
+                   FontAttributes="Bold" TextColor="AntiqueWhite"/>
+            <Label Text="Начните заказ с одной кнопки!"
+                   FontSize="18"
+                   LineHeight="1.2"
+                   TextColor="AntiqueWhite"/>
+            <Button Text="Поехали!" FontSize="17" FontAttributes="Bold" TextColor="AntiqueWhite" BackgroundColor="Brown" Clicked="Button_Clicked"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

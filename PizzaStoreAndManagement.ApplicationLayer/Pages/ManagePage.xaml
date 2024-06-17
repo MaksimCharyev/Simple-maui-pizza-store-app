@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaStoreAndManagement.ApplicationLayer.Pages.ManagePage"
+             xmlns:local="clr-namespace:PizzaStoreAndManagement.ApplicationLayer.ViewModels"
+             Title="ManagePage">
+    <ContentPage.BindingContext>
+        <local:ManagerOrdersViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid Padding="10" BackgroundColor="Wheat">
+        <!-- Определяем строки для размещения элементов -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Для заголовка -->
+            <RowDefinition Height="*" />
+            <!-- Для коллекции заказов -->
+            <RowDefinition Height="Auto" />
+            <!-- Для кнопки внизу -->
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок страницы -->
+        <Label Text="Управление заказами" 
+               FontSize="Large" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Start" 
+               TextColor="Black" 
+               Grid.Row="0" />
+
+        <!-- Коллекция заказов -->
+        <CollectionView ItemsSource="{Binding Orders}" Margin="10, 0" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White" Padding="10" Margin="0, 5" CornerRadius="10">
+                        <StackLayout>
+                            <Label Text="{Binding Order.Id, StringFormat='Заказ № {0}'}" 
+                                   FontSize="Medium" 
+                                   FontAttributes="Bold" 
+                                   TextColor="Black" />
+
+                            <Label Text="{Binding Order.CreatedTimeOrder, StringFormat='Дата заказа: {0:dd.MM.yyyy HH:mm}'}" 
+                                   FontSize="Small" 
+                                   TextColor="Gray" />
+
+                            <Label Text="{Binding Order.User.Name, StringFormat='Имя клиента: {0}'}" 
+                                   FontSize="Small" 
+                                   TextColor="Gray" />
+
+                            <StackLayout>
+                                <Label Text="Состав заказа:" FontSize="Small" FontAttributes="Bold" TextColor="Black"/>
+                                <ListView ItemsSource="{Binding Order.OrderItems}" HasUnevenRows="True" SeparatorVisibility="None" BackgroundColor="Transparent">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextCell Text="{Binding Name }" Detail="{Binding Quantity, StringFormat='x{0}'}" TextColor="Black" DetailColor="Gray"/>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="10">
+                                <Label Text="Статус:" FontSize="Medium" VerticalOptions="Center" TextColor="Black"/>
+                                <Picker Title="{Binding Order.Status}" Margin="4,0" FontSize="20"
+                                        ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type local:ManagerOrdersViewModel}}, Path=Statuses}" 
+                                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type local:ManagerOrdersViewModel}}, Path=SelectedStatus, Mode=TwoWay}" 
+                                        HorizontalOptions="FillAndExpand"
+                                        TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Кнопка сохранения изменений -->
+        <Button Text="Сохранить изменения" 
+                Command="{Binding SaveChangesCommand}" 
+                BackgroundColor="Orange" 
+                TextColor="White" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="End" 
+                Margin="10, 20" 
+                Grid.Row="2" />
+    </Grid>
+</ContentPage>

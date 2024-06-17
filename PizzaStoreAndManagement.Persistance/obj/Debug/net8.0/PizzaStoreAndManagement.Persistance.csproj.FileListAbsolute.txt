@@ -1,0 +1,17 @@
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\bin\Debug\net8.0\PizzaStoreAndManagement.Persistance.deps.json
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\bin\Debug\net8.0\PizzaStoreAndManagement.Persistance.runtimeconfig.json
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\bin\Debug\net8.0\PizzaStoreAndManagement.Persistance.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\bin\Debug\net8.0\PizzaStoreAndManagement.Persistance.pdb
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\bin\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\bin\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.pdb
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.csproj.AssemblyReference.cache
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.AssemblyInfoInputs.cache
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.AssemblyInfo.cs
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.csproj.CoreCompileInputs.cache
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaSto.00F34DBB.Up2Date
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\refint\PizzaStoreAndManagement.Persistance.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.pdb
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\PizzaStoreAndManagement.Persistance.genruntimeconfig.cache
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.Persistance\obj\Debug\net8.0\ref\PizzaStoreAndManagement.Persistance.dll

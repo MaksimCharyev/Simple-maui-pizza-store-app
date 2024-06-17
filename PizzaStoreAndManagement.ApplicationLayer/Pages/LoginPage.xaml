@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PizzaStoreAndManagement.ApplicationLayer.ViewModels"
+             x:Class="PizzaStoreAndManagement.ApplicationLayer.Pages.LoginPage"
+             Title="Вход в аккаунт">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Padding="10" Spacing="10" BackgroundColor="FloralWhite">
+        <Label Text="Почта" FontSize="18" TextColor="Black"/>
+        <Entry Text="{Binding Email}" Placeholder="Введите почту" TextColor="DimGray" Keyboard="Email" Background="AliceBlue"/>
+        <Label Text="Пароль" FontSize="18" TextColor="Black" />
+        <Entry Text="{Binding Password}" TextColor="DarkSlateGrey" Placeholder="Введите пароль" IsPassword="True" Background="AliceBlue" />
+        <Button Text="Войти" Command="{Binding LoginCommand}" Background="Orange" />
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+        <Label Text="Ещё нет аккаунта? Зарегистрируйтесь!" TextColor="DarkSlateGrey"/>
+        <Button Text="Регистрация" Clicked="OnRegClicked" Background="ForestGreen"/>
+    </StackLayout>
+</ContentPage>

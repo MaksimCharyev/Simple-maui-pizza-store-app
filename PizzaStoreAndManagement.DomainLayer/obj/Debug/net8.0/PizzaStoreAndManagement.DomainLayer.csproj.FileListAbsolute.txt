@@ -1,0 +1,11 @@
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\bin\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.deps.json
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\bin\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\bin\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.pdb
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.AssemblyInfoInputs.cache
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.AssemblyInfo.cs
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.csproj.CoreCompileInputs.cache
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\refint\PizzaStoreAndManagement.DomainLayer.dll
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\PizzaStoreAndManagement.DomainLayer.pdb
+C:\PizzaStoreAndManagement\PizzaStoreAndManagement.DomainLayer\obj\Debug\net8.0\ref\PizzaStoreAndManagement.DomainLayer.dll
